@@ -1,0 +1,94 @@
+.custom-card {
+    padding: 35px 20px!important;
+    margin-bottom: 25px;
+}.userinfocard {
+     position: relative;
+     background-image: url(../images/infobg.png)!important;
+     border-radius: 5px;
+     background-size: cover!important;
+ }
+.userinfocard::after {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    bottom: auto;
+    left: auto;
+    width: 223px;
+    height: 115px;
+    content: "";
+    background-image: url(../images/infobefore.png);
+}
+.userinfocard .dateinfo {
+    color: #fff;
+}
+.userinfocard h3 {
+    font-weight: 600!important;
+    color: #fff;
+    font-size: 15px;
+    margin: 0 0 10px;
+}
+.userinfocard h3 strong {
+    display: block;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin: 4px 0 0;
+    font-weight: bolder;
+}
+.km-profile-strength img {
+    margin: 0 0 10px;
+    height: 120px;
+    max-width: 100%;
+    width: 120px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 3px solid #82c4de;
+}
+.km-profile-strength .paddingtwenty {
+    padding: 0 20px;
+    position: relative;
+}
+.km-profile-strength p {
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 500;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 13px;
+    padding: 0 20px 7px;
+    border-bottom: 1px solid #d8d8d8;
+    font-size: 14px;
+    color: #424b5f;
+}
+.km-profile-strength p i {
+    height: auto;
+    color: #018651;
+    margin-left: auto;
+    font-size: 16px;
+}
+.km-profile-strength p i.fa-times-circle {
+    color: #f44336;
+}
+.km-profile-strength .updatebtnrow {
+    text-align: right;
+    padding: 7px 20px 20px;
+}
+.km-profile-strength .updatebtn {
+    border: none;
+    background: 0 0;
+    color: #017a37;
+    margin: 0;
+    padding: 0 18px 0 0;
+    position: relative;
+    font-weight: 600;
+}
+.km-profile-strength .updatebtn::after {
+    width: 6px;
+    height: 10px;
+    content: "";
+    background-image: url(../images/btnicon.png);
+    position: absolute;
+    top: 5px;
+    right: 0;
+    bottom: auto;
+    left: auto;
+}
