@@ -212,6 +212,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
+                                <label class="control-label">Commencing Date: <span class="requriedstar">*</span></label>
+                                <?php echo form_input('training_start_date', set_value('training_start_date'), array('class' => "form-control input-paf datepicker", 'id' => 'training_start_date', 'placeholder' => 'MM/DD/YYYY', 'readonly' => true, 'required' => '')) ?>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
                                 <label class="control-label">Duration (<small class="text-muted">in Years</small>): <span class="requriedstar">*</span></label>
                                 <?php echo form_input('years', set_value('years'), array('class' => "form-control input-paf only_numeric", 'maxlength' => 2, 'id' => 'years', 'placeholder' => '#', 'required' => '')) ?>
                             </div>

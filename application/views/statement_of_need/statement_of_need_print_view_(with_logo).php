@@ -19,23 +19,6 @@
         p{
             font-size: x-large;
         }
-        @media screen {
-            #print-btn {
-                float: right;
-            }
-            #whole_content {
-                font-family: 'Times New Roman';
-                text-align: justify;
-
-            }
-        }
-        @media print {
-            #whole_content {
-                font-family: 'Times New Roman' !important;
-                text-align: justify !important;
-
-            }
-        }
     </style>
 </head>
 <body>
@@ -67,7 +50,7 @@
         ?>
     </div>
     <div id="print-btn-div">
-        <button id="print-btn">Print Application</button>
+        <button id="print-btn" style="float: right;">Print Application</button>
         <?php if ($role_id == 4){ ?>
             <?php if ($result->application_submitted == 'N'){ ?>
                 <button id="save-btn" style="float: right; margin-right: 1%;">Save Application</button> &nbsp;
@@ -76,12 +59,24 @@
         <?php } ?>
         <button id="back-btn">Go Back</button>
     </div>
-    <div id="whole_content">
+    <div class="dashboard-middle-content">
         <div class="row" id="print-application">
             <!--<div class="paf-banks-next">-->
+            <br/>
+            <div style="padding-left: 15px; padding-right: 15px; padding-top: 1%; padding-bottom: 3%;">
+                <div style="margin-left: 4%;">
+                    <img style="width: 17%; float: left;"
+                         src="<?php echo base_url('assets/images/govlogo.png') ?>">
+                    <h3 class="text-center" style="padding-top: 3%;"><strong>Government of Pakistan
+                        <span style="width: 83%; float: right; font-size: 23px;" class="text-center">
+                            Ministry of National Health Services, Regulations & Coordination<br/>Attestation Section
+                        </span></strong>
+                    </h3>
+                </div>
+            </div>
             <div class="container">
                 <!--<div style="clear: both;"></div>-->
-                <div style="padding-top: 100px; padding-left: 15px; padding-right: 15px;">
+                <div style="padding-left: 15px; padding-right: 15px;">
                     <div class="row">
                         <div class="col-md-6">
                             <h5><strong>No. F11-1/2013-NHS R&C/NOC</strong></h5>
@@ -123,7 +118,7 @@
                             <br/>
                         </div>
                         <div class="col-md-12" style="margin-top: 5%;">
-                            <p class="pull-right text-center">(<?php echo $result->signatory != '' ? $result->signatory : 'Dr. Nusrat Haider'; ?>)<br/><span><?php echo $result->signatory_designation != '' ? $result->signatory_designation : 'Assistant Director'; ?></span><br/><span><?php echo $result->signatory_department != '' ? $result->signatory_department : ''; ?></span></p>
+                            <p class="pull-right">(<?php echo $result->signatory != '' ? $result->signatory : 'Dr. Nusrat Haider'; ?>)<br/><?php echo $result->signatory_designation != '' ? $result->signatory_designation : 'Assistant Director'; ?><br/><?php echo $result->signatory_department != '' ? $result->signatory_department : ''; ?></p>
                         </div>
                     </div>
                 </div>

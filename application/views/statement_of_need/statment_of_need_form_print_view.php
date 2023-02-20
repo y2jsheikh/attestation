@@ -223,6 +223,12 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
+                                <label class="control-label">Commencing Date: <span class="requriedstar">*</span></label>
+                                <label class="form-control input-paf"><?php echo $result->training_start_date ?></label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
                                 <label class="control-label">Duration (in Years): <span class="requriedstar">*</span></label>
                                 <label class="form-control input-paf"><?php echo $result->years ?></label>
                             </div>

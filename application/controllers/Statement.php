@@ -71,10 +71,11 @@ class Statement extends CI_Controller{
         $this->form_validation->set_rules('institute', 'Institute where Graduation Degree was received', 'trim|required');
         $this->form_validation->set_rules('pass_year', 'Year of Passing', 'trim|required');
         $this->form_validation->set_rules('is_gov_employee', 'Are you a serving government employee?', 'trim|required');
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         $this->form_validation->set_rules('post_grad_training', 'Post Grad Training', 'trim|required');
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         $this->form_validation->set_rules('speciality', 'Speciality Area', 'trim|required');
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        $this->form_validation->set_rules('training_start_date', 'Commencing Date', 'trim|required');
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         $this->form_validation->set_rules('years', 'Duration (in Years)', 'trim|required');
         $this->form_validation->set_rules('training_institute', 'Institute in which overseas training is sought', 'trim|required');
 
@@ -110,10 +111,11 @@ class Statement extends CI_Controller{
             $insert['post_qualification'] = $this->input->post('post_qualification', TRUE);
             $insert['pass_year'] = $this->input->post('pass_year', TRUE);
             $insert['is_gov_employee'] = $this->input->post('is_gov_employee', TRUE);
-            ////////////////////////////////////////////////////////////////////////////////////////////
             $insert['post_grad_training'] = $this->input->post('post_grad_training', TRUE);
-            ////////////////////////////////////////////////////////////////////////////////////////////
             $insert['speciality'] = $this->input->post('speciality', TRUE);
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            $insert['training_start_date'] = $this->input->post('training_start_date', TRUE);
+            //////////////////////////////////////////////////////////////////////////////////////////////
             $insert['years'] = $this->input->post('years', TRUE);
             $insert['training_institute'] = $this->input->post('training_institute', TRUE);
             $insert['is_special_need'] = $this->input->post('is_special_need', TRUE) == 'on' ? 'Y' : 'N';
@@ -127,8 +129,10 @@ class Statement extends CI_Controller{
             $insert_id = $this->common_model->insert('tbl_user_statement_of_need', $insert);
 
             $app_number = "1".str_pad($insert_id,10,"0",STR_PAD_LEFT);
+            $serial_no = str_pad($insert_id,1,"0",STR_PAD_LEFT);
 
             $updateStatement['app_number'] = $app_number;
+            $updateStatement['sr_no'] = $serial_no;
             $updateStatementWhr['id'] = $insert_id;
             // Statement App number Updated...
             $this->common_model->update('tbl_user_statement_of_need', $updateStatement, $updateStatementWhr);
@@ -197,10 +201,11 @@ class Statement extends CI_Controller{
         $this->form_validation->set_rules('institute', 'Institute where Graduation Degree was received', 'trim|required');
         $this->form_validation->set_rules('pass_year', 'Year of Passing', 'trim|required');
         $this->form_validation->set_rules('is_gov_employee', 'Are you a serving government employee?', 'trim|required');
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         $this->form_validation->set_rules('post_grad_training', 'Post Grad Training', 'trim|required');
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         $this->form_validation->set_rules('speciality', 'Speciality Area', 'trim|required');
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        $this->form_validation->set_rules('training_start_date', 'Commencing Date', 'trim|required');
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         $this->form_validation->set_rules('years', 'Duration (in Years)', 'trim|required');
         $this->form_validation->set_rules('training_institute', 'Institute in which overseas training is sought', 'trim|required');
 
@@ -243,10 +248,11 @@ class Statement extends CI_Controller{
             $update['post_qualification'] = $this->input->post('post_qualification', TRUE);
             $update['pass_year'] = $this->input->post('pass_year', TRUE);
             $update['is_gov_employee'] = $this->input->post('is_gov_employee', TRUE);
-            ////////////////////////////////////////////////////////////////////////////////////////////
             $update['post_grad_training'] = $this->input->post('post_grad_training', TRUE);
-            ////////////////////////////////////////////////////////////////////////////////////////////
             $update['speciality'] = $this->input->post('speciality', TRUE);
+            //////////////////////////////////////////////////////////////////////////////////////////////
+            $update['training_start_date'] = $this->input->post('training_start_date', TRUE);
+            //////////////////////////////////////////////////////////////////////////////////////////////
             $update['years'] = $this->input->post('years', TRUE);
             $update['training_institute'] = $this->input->post('training_institute', TRUE);
             $update['is_special_need'] = $this->input->post('is_special_need', TRUE) == 'on' ? 'Y' : 'N';

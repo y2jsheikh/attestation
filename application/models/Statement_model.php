@@ -153,6 +153,7 @@ class Statement_model extends CI_Model{
             tbl_user_statement_of_need.statement_of_need_file,
             tbl_user_statement_of_need.pass_year,
             tbl_user_statement_of_need.speciality,
+            tbl_user_statement_of_need.training_start_date,
             tbl_user_statement_of_need.years,
             tbl_user_statement_of_need.training_institute,
             tbl_user_statement_of_need.is_gov_employee,
