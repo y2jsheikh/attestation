@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">PMC Registered: </label><br/>
+                                <label class="control-label">PMDC Registered: </label><br/>
                                 <?php
                                 if ($user_data->pmc_no != '') {
                                 ?>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="col-md-4" id="pmc_yes_div" style="display: block;">
-                            <label class="control-label">PMC Number: <span class="requriedstar">*</span></label>
+                            <label class="control-label">PMDC Number: <span class="requriedstar">*</span></label>
                             <?php
                             if ($user_data->pmc_no != '') {
                             ?>
@@ -235,7 +235,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="control-label"><input name="is_special_need" id="is_special_need" type="checkbox" /> Special Need </label>
+                                <label class="control-label"><input name="is_special_need" id="is_special_need" type="checkbox" /> Exceptional Need </label>
                                 <textarea name="special_need_remarks"
                                           id="special_need_remarks"
                                           class="form-control input-paf"

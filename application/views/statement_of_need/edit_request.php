@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label class="control-label">PMC Registered: </label><br/>
+                                <label class="control-label">PMDC Registered: </label><br/>
                                 <?php
                                 if ($result->pmc_no != '') {
                                 ?>
@@ -64,7 +64,7 @@
                             </div>
                         </div>
                         <div class="col-md-4" id="pmc_no_div" style="display: <?php echo $result->is_pmc_reg == 'Y' ? 'block' : 'none'; ?>;">
-                            <label class="control-label">PMC Number: </label>
+                            <label class="control-label">PMDC Number: </label>
                             <?php
                             if ($result->pmc_no != '') {
                             ?>

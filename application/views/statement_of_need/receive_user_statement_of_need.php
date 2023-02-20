@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="control-label">PMC #:</label>
+                            <label class="control-label">PMDC #:</label>
                             <input type="text" placeholder="#" id="pmc_no" class="form-control input-paf" />
                         </div>
                     </div>
