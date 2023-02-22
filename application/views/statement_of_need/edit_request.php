@@ -309,7 +309,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label class="control-label"><input name="is_special_need" id="is_special_need" <?php echo $result->is_special_need == 'Y' ? 'checked' : ''; ?> type="checkbox" /> Special Need </label>
+                                <label class="control-label"><input name="is_special_need" id="is_special_need" <?php echo $result->is_special_need == 'Y' ? 'checked' : ''; ?> type="checkbox" /> Exceptional Need </label>
                                 <textarea name="special_need_remarks"
                                           id="special_need_remarks"
                                           class="form-control input-paf"
